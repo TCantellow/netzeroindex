@@ -8,31 +8,24 @@
     <meta name="theme-color" content="#ffffff">
 
     <script>
+        // Update the page theme based on local storage
         function updateMode() {
-            // Determine if the dark theme should be applied
-            const isDark = localStorage.theme === "dark";
-            // Toggle dark class based on isDark
+            const isDark = localStorage.getItem('theme') === 'dark';
             document.documentElement.classList.toggle("dark", isDark);
-            // Also toggle body styles based on the theme
-            if (isDark) {
-                document.body.style.backgroundColor = "#333"; // Dark background
-                document.body.style.color = "#ffffff"; // Light text color
-            } else {
-                document.body.style.backgroundColor = "#ffffff"; // Light background
-                document.body.style.color = "#000000"; // Dark text color
-            }
+            document.body.style.backgroundColor = isDark ? "#333" : "#ffffff";
+            document.body.style.color = isDark ? "#ffffff" : "#000000";
         }
 
+        // Toggle theme and update local storage
         function toggleMode() {
-            // Toggle between light and dark theme in localStorage
-            localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
+            const newTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
             updateMode();
         }
 
         window.onload = function() {
-            // Set initial theme to light if no theme is set
-            if (!localStorage.theme) {
-                localStorage.theme = "light";
+            if (!localStorage.getItem('theme')) {
+                localStorage.setItem('theme', 'light');
             }
             updateMode();
         };
@@ -57,7 +50,7 @@
             align-items: center;
         }
         h1 {
-            text-align: center;
+            text-align: left; /* Left-align the title */
             font-size: 2em;
             margin-bottom: 10px;
         }
@@ -97,18 +90,17 @@
     <main class="content">
         <h1>The Net Zero Vulnerability Index</h1>
         
-        <p>The <b> Net Zero Vulnerability Index (NZVI)</b> is a tool to assess how vulnerable different regions in the UK are to economic changes as the country moves towards a net-zero economy. This model looks at various factors, such as local economic complexity and relatedness, how many jobs rely on at-risk sectors, and the size of the local population. Together, these factors create a profile that shows which areas might be most affected by changes related to achieving net-zero emissions.</p>
+        <p>The <strong>Net Zero Vulnerability Index (NZVI)</strong> is a tool to assess how vulnerable different regions in the UK are to economic changes as the country moves towards a net-zero economy. This model looks at various factors, such as local economic complexity and relatedness, how many jobs rely on at-risk sectors, and the size of the local population. Together, these factors create a profile that shows which areas might be most affected by changes related to achieving net-zero emissions.</p>
         
-        <p><b>A higher score indicates an area more at risk</b>. This interactive map presents data for the following administrative geographies:</p>
+        <p><strong>A higher score indicates an area more at risk.</strong> This interactive map presents data for the following administrative geographies:</p>
         <ul>
             <li><strong>LADs:</strong> Local Authority District.</li>
-            <li><strong>LEPs:</strong> Local Enterprise Partnerships</li>
-            <li><strong>CAs:</strong> Combined Authorities</li>
+            <li><strong>LEPs:</strong> Local Enterprise Partnerships.</li>
+            <li><strong>CAs:</strong> Combined Authorities.</li>
         </ul>
 
         <iframe src="VNZI_Interactive_Map.html" width="100%" height="600px" style="border:none;"></iframe>
 
-        <!-- Normal text moved from footer -->
         <p>The NZVI goes beyond just measuring job losses; it also considers how well communities and economies can adapt to changes in traditional industries. By examining the complexity of jobs, the connections between different industries, reliance on key sectors, and how many people might be affected, the NZVI provides a detailed picture of regional vulnerabilities.</p>
         
         <p>Special thanks to the contributors to this project: 
