@@ -2,14 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Net Zero Interactive Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <title>Net Zero Interactive Map - Net Zero Index</title>
+    <meta property="og:title" content="Net Zero Interactive Map - Net Zero Index">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="images/map_thumbnail.jpg">
+    <meta property="og:url" content="https://tcantellow.github.io/">
+    <meta property="og:description" content="Interactive map showing data for LADs, LEPs, and CAs for Net Zero Index project.">
+    <meta name="description" content="Interactive map showing data for LADs, LEPs, and CAs for Net Zero Index project.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@YourTwitterHandle">
+    <meta name="twitter:creator" content="@YourTwitterHandle">
+    <link rel="stylesheet" href="https://ljwolf.org/css/style.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <script>
+        function updateMode() {
+            localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+                ? document.documentElement.classList.add("dark")
+                : document.documentElement.classList.remove("dark");
+        }
+        function toggleMode() {
+            localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
+            updateMode();
+        }
+        window.onload = updateMode();
+    </script>
 </head>
 <body>
-    <h1>Welcome to the Net Zero Interactive Map</h1>
-    <p>This interactive map shows key areas of interest related to achieving net zero emissions.</p>
-
-    <!-- Embed the map file -->
-    <iframe src="VNZI_Interactive_Map.html" width="100%" height="600px" style="border:none;"></iframe>
+    <header class="md:px-0 px-2">
+        <nav>
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <div class="nav-main my-2.5">
+                    <a href="/" class="nav-title py-2.5 text-2xl text-zinc-600 dark:text-zinc-300">Net Zero Index</a>
+                </div>
+                <button type="button" onclick="toggleMode()" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden">
+                    <span class="sr-only">Toggle Dark Mode</span>
+                    <img id="dark-mode-icon" src="https://ljwolf.org/img/dark_mode.svg" class="h-6 w-6" alt="Dark Mode">
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="content container mt-4 mx-auto leading-loose px-2">
+        <article class="article">
+            <h1 class="text-center text-3xl font-bold mb-4">Welcome to the Net Zero Interactive Map</h1>
+            <p>This interactive map presents data for Local Authority Districts (LADs), Local Enterprise Partnerships (LEPs), and Combined Authorities (CAs) in the context of net zero emissions:</p>
+            <ul class="list-disc list-inside my-4 text-left">
+                <li><strong>LADs:</strong> Local Authority Districts representing regional governance areas.</li>
+                <li><strong>LEPs:</strong> Voluntary partnerships between local authorities and businesses.</li>
+                <li><strong>CAs:</strong> Groups of local authorities collaborating on strategic functions.</li>
+            </ul>
+            <div class="flex justify-center">
+                <iframe src="VNZI_Interactive_Map.html" width="100%" height="600px" style="border:none;"></iframe>
+            </div>
+            <footer class="mt-6 text-center text-gray-600">
+                <p>Special thanks to the contributors to this project: Tom Cantellow (author), Ed Atkins, Cait Robinson, and Sean Fox.</p>
+            </footer>
+        </article>
+    </main>
 </body>
 </html>
