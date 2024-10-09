@@ -9,14 +9,33 @@
 
     <script>
         function updateMode() {
-            const isDark = localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
+            // Determine if the dark theme should be applied
+            const isDark = localStorage.theme === "dark";
+            // Toggle dark class based on isDark
             document.documentElement.classList.toggle("dark", isDark);
+            // Also toggle body styles based on the theme
+            if (isDark) {
+                document.body.style.backgroundColor = "#333"; // Dark background
+                document.body.style.color = "#ffffff"; // Light text color
+            } else {
+                document.body.style.backgroundColor = "#ffffff"; // Light background
+                document.body.style.color = "#000000"; // Dark text color
+            }
         }
+
         function toggleMode() {
+            // Toggle between light and dark theme in localStorage
             localStorage.theme = localStorage.theme === "dark" ? "light" : "dark";
             updateMode();
         }
-        window.onload = updateMode;
+
+        window.onload = function() {
+            // Set initial theme to light if no theme is set
+            if (!localStorage.theme) {
+                localStorage.theme = "light";
+            }
+            updateMode();
+        };
     </script>
     <style>
         body {
@@ -26,6 +45,7 @@
             background-color: #ffffff; /* Light background */
             color: #000000; /* Dark text color */
             font-family: Arial, sans-serif; /* Set a basic font */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
         }
         header {
             margin-bottom: 20px;
@@ -53,6 +73,11 @@
             cursor: pointer;
             font-size: 14px;
             color: #555;
+        }
+        /* Dark mode styles */
+        .dark body {
+            background-color: #333; /* Dark background */
+            color: #ffffff; /* Light text color */
         }
     </style>
 </head>
