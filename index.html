@@ -3,108 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
-    <title>NZVI - Map</title>
-    <meta name="description" content="Interactive map showing data for LADs, LEPs, and CAs for Net Zero Index project.">
+    <title>NZVI - Authors</title>
+    <meta name="description" content="About the authors">
     <meta name="theme-color" content="#ffffff">
 
-    <script>
-        // Update the page theme based on local storage
-        function updateMode() {
-            const isDark = localStorage.getItem('theme') === 'dark';
-            document.documentElement.classList.toggle("dark", isDark);
-            document.body.style.backgroundColor = isDark ? "#333" : "#ffffff";
-            document.body.style.color = isDark ? "#ffffff" : "#000000";
-        }
-
-        // Toggle theme and update local storage
-        function toggleMode() {
-            const newTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-            localStorage.setItem('theme', newTheme);
-            updateMode();
-        }
-
-        window.onload = function() {
-            if (!localStorage.getItem('theme')) {
-                localStorage.setItem('theme', 'light');
-            }
-            updateMode();
-        };
-    </script>
-    <style>
-        body {
-            max-width: 800px; /* Set a maximum width for the content */
-            margin: 0 auto; /* Center the content */
-            padding: 20px; /* Add padding */
-            background-color: #ffffff; /* Light background */
-            color: #000000; /* Dark text color */
-            font-family: Arial, sans-serif; /* Set a basic font */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
-            text-align: justify; /* Justify text */
-        }
-        header {
-            margin-bottom: 20px;
-            display: flex; /* Use flexbox for header */
-            justify-content: space-between; /* Space between items */
-            align-items: center; /* Center items vertically */
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-title {
-            display: flex;
-            gap: 15px; /* Increase spacing between top links */
-        }
-        h1 {
-            text-align: left; /* Left-align the title */
-            font-size: 2em;
-            margin: 0; /* Remove default margin */
-        }
-        .content {
-            line-height: 1.6; /* Better readability */
-        }
-        .sub-nav {
-            display: flex; /* Enable flexbox */
-            justify-content: space-between; /* Spread items across the width */
-            margin-bottom: 20px;
-        }
-        .sub-nav a {
-            flex: none; /* Prevent links from stretching */
-            text-align: center; /* Center text within links */
-            padding: 10px; /* Add padding for better spacing */
-            text-decoration: none; /* Remove underline from links */
-            color: inherit; /* Inherit text color */
-            white-space: nowrap; /* Prevent text from wrapping */
-            border-bottom: 2px solid transparent; /* Add a border for hover effect */
-            transition: border-bottom 0.3s; /* Smooth transition for border */
-        }
-        .sub-nav a:hover {
-            border-bottom: 2px solid #000; /* Change border color on hover */
-        }
-        footer {
-            text-align: right; /* Right-align text */
-            margin-top: 20px;
-            display: flex; /* Use flexbox for footer */
-            justify-content: flex-end; /* Align items to the right */
-        }
-        .toggle-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 14px;
-            color: #555;
-            margin-left: 20px; /* Space between heading and button */
-        }
-        /* Dark mode styles */
-        .dark body {
-            background-color: #333; /* Dark background */
-            color: #ffffff; /* Light text color */
-        }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css"> <!-- Link to external stylesheet -->
+    <script src="assets/script.js" defer></script> <!-- Link to external script -->
 </head>
 <body>
     <header>
+        <h1>The Net Zero Vulnerability Index</h1>
+        <button type="button" onclick="toggleMode()" class="toggle-button">
+            Toggle Dark Mode
+        </button>
+    </header>
         <h1>The Net Zero Vulnerability Index</h1>
         <button type="button" onclick="toggleMode()" class="toggle-button">
             Toggle Dark Mode
@@ -136,12 +48,12 @@
 
         <footer>
             <nav>
-<div class="nav-title">
-    <span>Website by </span>
-    <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">Tom Cantellow</a>
-    <span> | </span>
-    <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
-</div>
+                <div class="nav-title">
+                    <span>Website by </span>
+                    <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">Tom Cantellow</a>
+                    <span> | </span>
+                    <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
+                </div>
             </nav>
         </footer>
     </main>
