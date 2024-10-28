@@ -60,12 +60,22 @@ h1 {
 }
 
 footer {
-    text-align: right;
-    margin-top: 20px;
     display: flex;
-    justify-content: flex-end;
-    padding: 10px 0;
-    gap: 10px;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Space above the footer */
+    padding: 10px 0; /* Space above and below footer items */
+}
+
+.nav-title {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between items */
+    margin-left: 10px; /* Space on the left for the title */
+}
+
+.nav-title span {
+    margin: 0 5px; /* Horizontal spacing for span elements */
 }
 
 .toggle-button {
