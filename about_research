@@ -91,10 +91,11 @@
         <h1>The Net Zero Vulnerability Index</h1>
 
         <div class="sub-nav">
-            <a href="NZVI_Interactive_Map.html">Interactive Map</a>
+            <a href="index.html">Home</a>
             <a href="about_research.html">About the Research</a>
             <a href="about_authors.html">About the Authors</a>
-            <a href="https://www.bristol.ac.uk/policybristol/">PolicyBristol Report</a> <! -- UPDATE THIS LINK!!-->
+            <a href="NZVI_Interactive_Map.html">Full-Screen Interactive Map</a>
+            <a href="https://www.bristol.ac.uk/policybristol/">PolicyBristol Report</a>
         </div>
         
              <p>Achieving net-zero requires extensive economic changes in the world of work for many. Some sectors will pivot to new activities to meet the demands of the net zero transition. Others will decline entirely as technologies become redundant and others emerge. An estimated 7% of the UK workforce will witness these changes (approximately 2.2 million people): for many, net zero will have important personal and community-level impacts. These experiences will represent an economic shock which, if not mitigated, could be as significant as previous deindustrialisation and coal mine closure.</p>
