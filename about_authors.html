@@ -65,9 +65,16 @@
             line-height: 1.6; /* Better readability */
         }
         .sub-nav {
-            display: flex;
-            gap: 30px; /* Increased spacing between subheading links */
+            display: flex; /* Enable flexbox */
+            justify-content: space-between; /* Spread items across the width */
             margin-bottom: 20px;
+        }
+        .sub-nav a {
+            flex: 1; /* Allow links to grow and fill space */
+            text-align: center; /* Center text within links */
+            padding: 10px; /* Add padding for better spacing */
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color */
         }
         footer {
             text-align: right; /* Right-align text */
