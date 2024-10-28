@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
-    <title>NZVI - Authors</title>
-    <meta name="description" content="About the authors of the project">
+    <title>NZVI - Map</title>
+    <meta name="description" content="Interactive map showing data for LADs, LEPs, and CAs for Net Zero Index project.">
     <meta name="theme-color" content="#ffffff">
 
     <script>
@@ -49,6 +49,10 @@
             justify-content: space-between;
             align-items: center;
         }
+        .nav-title {
+            display: flex;
+            gap: 15px; /* Increase spacing between top links */
+        }
         h1 {
             text-align: left; /* Left-align the title */
             font-size: 2em;
@@ -56,6 +60,11 @@
         }
         .content {
             line-height: 1.6; /* Better readability */
+        }
+        .sub-nav {
+            display: flex;
+            gap: 30px; /* Increased spacing between subheading links */
+            margin-bottom: 20px;
         }
         footer {
             text-align: center;
@@ -79,6 +88,7 @@
     <header>
         <nav>
             <div class="nav-title">
+                <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">LinkedIn</a>
                 <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
             </div>
             <button type="button" onclick="toggleMode()" class="toggle-button">
@@ -88,7 +98,6 @@
     </header>
 
     <main class="content">
-        <h1>The Net Zero Vulnerability Index</h1>
 
         <div class="sub-nav">
             <a href="NZVI_Interactive_Map.html">Interactive Map</a>
