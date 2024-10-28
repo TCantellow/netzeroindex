@@ -103,16 +103,13 @@
 
              <p>This work has been funded by the <a href="https://bristol.ac.uk/poverty-institute/" target = "_blank">Bristol Poverty Institute</a> via its 2024 Seedcorn Fund, as well as ESRC Impact Acceleration funding (2024).</p>
 
-This project is a product of a collaboration between researchers in the University of Bristol's <a href="https://www.bristol.ac.uk/geography/">School of Geographical Sciences>.
-               <a href="https://uk.linkedin.com/in/tomcantellow" target="_blank">Tom Cantellow</a> is a post-submission PhD student who specialises in spatial and statistical analysis of politics and economics, 
-            <a href="https://research-information.bris.ac.uk/en/persons/ed-atkins" target="_blank">Dr Ed Atkins</a> is a Senior Lecturer who works on the contested character of environmental and energy policy and politics, 
-            <a href="https://www.caitlin-h-robinson.com/" target="_blank">Cait Robinson</a>, is a Senior Research Fellow and Proleptic Lecturer who is currently leading a UKRI Future Leaders Fellowship project mapping ambient vulnerabilities in UK cities.
-            and <a href="https://www.bristol.ac.uk/people/person/Sean-Fox-ade0ab9d-58b0-4b25-833a-73e8d4633d42/" target="_blank">Sean Fox</a> is an Associate Professor focusing primarily on the causes and consequences of global urbanization, the political economy of urban governance, and sustainable city futures.
-        </p>
-   
-        
+
         <footer>
-            <!-- Footer can be empty or can have other content -->
+            <nav>
+            <div class="nav-title">
+                <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">Website by Tom Cantellow</a>
+                <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
+            </div>
         </footer>
     </main>
 </body>
