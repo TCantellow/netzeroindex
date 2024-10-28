@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
-    <title>NZVI - Map</title>
-    <meta name="description" content="Interactive map showing data for LADs, LEPs, and CAs for Net Zero Index project.">
+    <title>NZVI - Authors</title>
+    <meta name="description" content="About the authors">
     <meta name="theme-color" content="#ffffff">
 
     <script>
@@ -43,6 +43,9 @@
         }
         header {
             margin-bottom: 20px;
+            display: flex; /* Use flexbox for header */
+            justify-content: space-between; /* Space between items */
+            align-items: center; /* Center items vertically */
         }
         nav {
             display: flex;
@@ -56,7 +59,7 @@
         h1 {
             text-align: left; /* Left-align the title */
             font-size: 2em;
-            margin-bottom: 10px;
+            margin: 0; /* Remove default margin */
         }
         .content {
             line-height: 1.6; /* Better readability */
@@ -67,8 +70,10 @@
             margin-bottom: 20px;
         }
         footer {
-            text-align: center;
+            text-align: right; /* Right-align text */
             margin-top: 20px;
+            display: flex; /* Use flexbox for footer */
+            justify-content: flex-end; /* Align items to the right */
         }
         .toggle-button {
             background: none;
@@ -76,6 +81,7 @@
             cursor: pointer;
             font-size: 14px;
             color: #555;
+            margin-left: 20px; /* Space between heading and button */
         }
         /* Dark mode styles */
         .dark body {
@@ -86,20 +92,13 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-title">
-                <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">LinkedIn</a>
-                <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
-            </div>
-            <button type="button" onclick="toggleMode()" class="toggle-button">
-                Toggle Dark Mode
-            </button>
-        </nav>
+        <h1>The Net Zero Vulnerability Index</h1>
+        <button type="button" onclick="toggleMode()" class="toggle-button">
+            Toggle Dark Mode
+        </button>
     </header>
 
     <main class="content">
-
-                <h1>The Net Zero Vulnerability Index</h1>
 
         <div class="sub-nav">
             <a href="index.html">Home</a>
