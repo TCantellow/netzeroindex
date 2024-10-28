@@ -49,6 +49,10 @@
             justify-content: space-between;
             align-items: center;
         }
+        .nav-title {
+            display: flex;
+            gap: 15px; /* Increase spacing between top links */
+        }
         h1 {
             text-align: left; /* Left-align the title */
             font-size: 2em;
@@ -56,6 +60,11 @@
         }
         .content {
             line-height: 1.6; /* Better readability */
+        }
+        .sub-nav {
+            display: flex;
+            gap: 30px; /* Increased spacing between subheading links */
+            margin-bottom: 20px;
         }
         footer {
             text-align: center;
@@ -79,6 +88,7 @@
     <header>
         <nav>
             <div class="nav-title">
+                <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">LinkedIn</a>
                 <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
             </div>
             <button type="button" onclick="toggleMode()" class="toggle-button">
@@ -94,7 +104,7 @@
             <a href="NZVI_Interactive_Map.html">Interactive Map</a>
             <a href="about_research.html">About the Research</a>
             <a href="about_authors.html">About the Authors</a>
-            <a href="https://www.bristol.ac.uk/policybristol/">PolicyBristol Report</a> <! -- UPDATE THIS LINK!!-->
+            <a href="https://www.bristol.ac.uk/policybristol/">PolicyBristol Report</a>
         </div>
         
         <p>The <strong>Net Zero Vulnerability Index (NZVI)</strong> is a tool to assess how vulnerable different regions in the UK are to economic changes as the country moves towards a net-zero economy. This model looks at various factors, such as local economic complexity and relatedness, how many jobs rely on at-risk sectors, and the size of the local population. Together, these factors create a profile that shows which areas might be most affected by changes related to achieving net-zero emissions.</p>
@@ -109,9 +119,7 @@
         <iframe src="NZVI_Interactive_Map.html" width="100%" height="600px" style="border:none;"></iframe>
 
         <p>The NZVI goes beyond just measuring job losses; it also considers how well communities and economies can adapt to changes in traditional industries. By examining the complexity of jobs, the connections between different industries, reliance on key sectors, and how many people might be affected, the NZVI provides a detailed picture of regional vulnerabilities.</p>
-        
-   
-        
+
         <footer>
             <!-- Footer can be empty or can have other content -->
         </footer>
