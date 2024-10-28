@@ -76,6 +76,11 @@
             text-decoration: none; /* Remove underline from links */
             color: inherit; /* Inherit text color */
             white-space: nowrap; /* Prevent text from wrapping */
+            border-bottom: 2px solid transparent; /* Add a border for hover effect */
+            transition: border-bottom 0.3s; /* Smooth transition for border */
+        }
+        .sub-nav a:hover {
+            border-bottom: 2px solid #000; /* Change border color on hover */
         }
         footer {
             text-align: right; /* Right-align text */
@@ -131,10 +136,11 @@
 
         <footer>
             <nav>
-            <div class="nav-title">
-                <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">Website by Tom Cantellow</a>
-                <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
-            </div>
+                <div class="nav-title">
+                    <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">Website by Tom Cantellow</a>
+                    <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
+                </div>
+            </nav>
         </footer>
     </main>
 </body>
