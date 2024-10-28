@@ -25,7 +25,9 @@ nav {
 
 .nav-title {
     display: flex;
-    gap: 15px;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between items */
+    margin-left: 10px; /* Space on the left for the title */
 }
 
 h1 {
@@ -67,11 +69,8 @@ footer {
     padding: 10px 0; /* Space above and below footer items */
 }
 
-.nav-title {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    gap: 10px; /* Space between items */
-    margin-left: 10px; /* Space on the left for the title */
+footer nav {
+    display: flex; /* Ensure nav is also flex */
 }
 
 .nav-title span {
