@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <title>NZVI - About Research</title>
+    <meta name="description" content="About the research project.">
+    <meta name="theme-color" content="#ffffff">
+
+    <script>
+        // Update the page theme based on local storage
+        function updateMode() {
+            const isDark = localStorage.getItem('theme') === 'dark';
+            document.documentElement.classList.toggle("dark", isDark);
+            document.body.style.backgroundColor = isDark ? "#333" : "#ffffff";
+            document.body.style.color = isDark ? "#ffffff" : "#000000";
+        }
+
+        // Toggle theme and update local storage
+        function toggleMode() {
+            const newTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            updateMode();
+        }
+
+        window.onload = function() {
+            if (!localStorage.getItem('theme')) {
+                localStorage.setItem('theme', 'light');
+            }
+            updateMode();
+        };
+    </script>
+    <style>
+        body {
+            max-width: 800px; /* Set a maximum width for the content */
+            margin: 0 auto; /* Center the content */
+            padding: 20px; /* Add padding */
+            background-color: #ffffff; /* Light background */
+            color: #000000; /* Dark text color */
+            font-family: Arial, sans-serif; /* Set a basic font */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+            text-align: justify; /* Justify text */
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            text-align: left; /* Left-align the title */
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .content {
+            line-height: 1.6; /* Better readability */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .toggle-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: #555;
+        }
+        /* Dark mode styles */
+        .dark body {
+            background-color: #333; /* Dark background */
+            color: #ffffff; /* Light text color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-title">
+                <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
+            </div>
+            <button type="button" onclick="toggleMode()" class="toggle-button">
+                Toggle Dark Mode
+            </button>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>The Net Zero Vulnerability Index</h1>
+
+        <div class="sub-nav">
+            <a href="NZVI_Interactive_Map.html">Interactive Map</a>
+            <a href="about_research.html">About the Research</a>
+            <a href="about_authors.html">About the Authors</a>
+            <a href="https://www.bristol.ac.uk/policybristol/">PolicyBristol Report</a> <! -- UPDATE THIS LINK!!-->
+        </div>
+        
+             <p>Achieving net-zero requires extensive economic changes in the world of work for many. Some sectors will pivot to new activities to meet the demands of the net zero transition. Others will decline entirely as technologies become redundant and others emerge. An estimated 7% of the UK workforce will witness these changes (approximately 2.2 million people): for many, net zero will have important personal and community-level impacts. These experiences will represent an economic shock which, if not mitigated, could be as significant as previous deindustrialisation and coal mine closure.</p>
+
+             <p>We have developed a net-zero vulnerability index (NZVI) to reveal the people and places where these impacts might be clustered. This research plugs a gap in current understandings of this vulnerability by tracing and mapping which communities in the UK are both vulnerable to economic change. </p>
+
+             <p>This work has been funded by the <a href="https://bristol.ac.uk/poverty-institute/" target = "_blank">Bristol Poverty Institute</a> via its 2024 Seedcorn Fund, as well as ESRC Impact Acceleration funding (2024).</p>
+
+This project is a product of a collaboration between researchers in the University of Bristol's <a href="https://www.bristol.ac.uk/geography/">School of Geographical Sciences>.
+               <a href="https://uk.linkedin.com/in/tomcantellow" target="_blank">Tom Cantellow</a> is a post-submission PhD student who specialises in spatial and statistical analysis of politics and economics, 
+            <a href="https://research-information.bris.ac.uk/en/persons/ed-atkins" target="_blank">Dr Ed Atkins</a> is a Senior Lecturer who works on the contested character of environmental and energy policy and politics, 
+            <a href="https://www.caitlin-h-robinson.com/" target="_blank">Cait Robinson</a>, is a Senior Research Fellow and Proleptic Lecturer who is currently leading a UKRI Future Leaders Fellowship project mapping ambient vulnerabilities in UK cities.
+            and <a href="https://www.bristol.ac.uk/people/person/Sean-Fox-ade0ab9d-58b0-4b25-833a-73e8d4633d42/" target="_blank">Sean Fox</a> is an Associate Professor focusing primarily on the causes and consequences of global urbanization, the political economy of urban governance, and sustainable city futures.
+        </p>
+   
+        
+        <footer>
+            <!-- Footer can be empty or can have other content -->
+        </footer>
+    </main>
+</body>
+</html>
