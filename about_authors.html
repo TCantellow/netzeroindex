@@ -7,96 +7,8 @@
     <meta name="description" content="About the authors">
     <meta name="theme-color" content="#ffffff">
 
-    <script>
-        // Update the page theme based on local storage
-        function updateMode() {
-            const isDark = localStorage.getItem('theme') === 'dark';
-            document.documentElement.classList.toggle("dark", isDark);
-            document.body.style.backgroundColor = isDark ? "#333" : "#ffffff";
-            document.body.style.color = isDark ? "#ffffff" : "#000000";
-        }
-
-        // Toggle theme and update local storage
-        function toggleMode() {
-            const newTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-            localStorage.setItem('theme', newTheme);
-            updateMode();
-        }
-
-        window.onload = function() {
-            if (!localStorage.getItem('theme')) {
-                localStorage.setItem('theme', 'light');
-            }
-            updateMode();
-        };
-    </script>
-    <style>
-        body {
-            max-width: 800px; /* Set a maximum width for the content */
-            margin: 0 auto; /* Center the content */
-            padding: 20px; /* Add padding */
-            background-color: #ffffff; /* Light background */
-            color: #000000; /* Dark text color */
-            font-family: Arial, sans-serif; /* Set a basic font */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
-            text-align: justify; /* Justify text */
-        }
-        header {
-            margin-bottom: 20px;
-            display: flex; /* Use flexbox for header */
-            justify-content: space-between; /* Space between items */
-            align-items: center; /* Center items vertically */
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-title {
-            display: flex;
-            gap: 15px; /* Increase spacing between top links */
-        }
-        h1 {
-            text-align: left; /* Left-align the title */
-            font-size: 2em;
-            margin: 0; /* Remove default margin */
-        }
-        .content {
-            line-height: 1.6; /* Better readability */
-        }
-        .sub-nav {
-            display: flex; /* Enable flexbox */
-            justify-content: space-between; /* Spread items across the width */
-            margin-bottom: 20px;
-        }
-        .sub-nav a {
-            flex: none; /* Prevent links from stretching */
-            text-align: center; /* Center text within links */
-            padding: 10px; /* Add padding for better spacing */
-            text-decoration: none; /* Remove underline from links */
-            color: inherit; /* Inherit text color */
-            white-space: nowrap; /* Prevent text from wrapping */
-        }
-        footer {
-            text-align: right; /* Right-align text */
-            margin-top: 20px;
-            display: flex; /* Use flexbox for footer */
-            justify-content: flex-end; /* Align items to the right */
-        }
-        .toggle-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 14px;
-            color: #555;
-            margin-left: 20px; /* Space between heading and button */
-        }
-        /* Dark mode styles */
-        .dark body {
-            background-color: #333; /* Dark background */
-            color: #ffffff; /* Light text color */
-        }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css"> <!-- Link to external stylesheet -->
+    <script src="assets/script.js" defer></script> <!-- Link to external script -->
 </head>
 <body>
     <header>
@@ -112,31 +24,30 @@
             <a href="about_research.html">About the Research</a>
             <a href="about_authors.html">About the Authors</a>
             <a href="NZVI_Interactive_Map.html">Full-Screen Map</a>
-            <a href="https://www.bristol.ac.uk/policybristol/">PolicyBristol Report</a>
+            <a href="https://www.bristol.ac.uk/policybristol/" target="_blank">PolicyBristol Report</a>
         </div>
         
-<p>
-    This project is a product of a collaboration between researchers in the University of Bristol's 
-    <a href="https://www.bristol.ac.uk/geography/">School of Geographical Sciences</a>.
-    <br><br>
-    <a href="https://uk.linkedin.com/in/tomcantellow" target="_blank">Tom Cantellow</a> is a post-submission PhD student who specialises in spatial and statistical analysis of politics and economics. He can be contacted <a href="mailto:t.cantellow@bristol.ac.uk">here</a>. 
-    <br><br>
-    <a href="https://research-information.bris.ac.uk/en/persons/ed-atkins" target="_blank">Dr Ed Atkins</a> is a Senior Lecturer in Human Geography. His work focuses on energy transitions and socio-economic justice. He can be contacted <a href="mailto:ed.atkins@bristol.ac.uk">here</a>. 
-    <br><br>
-    <a href="https://www.caitlin-h-robinson.com/" target="_blank">Cait Robinson</a> is a Senior Research Fellow and Proleptic Lecturer who is currently leading a UKRI Future Leaders Fellowship project mapping ambient vulnerabilities in UK cities. 
-    <br><br>
-    and <a href="https://www.bristol.ac.uk/people/person/Sean-Fox-ade0ab9d-58b0-4b25-833a-73e8d4633d42/" target="_blank">Sean Fox</a> is an Associate Professor in Global Development focusing on the causes and consequences of global urbanization, the political economy of urban governance, and sustainable city futures.
-</p>
-
+        <p>
+            This project is a product of a collaboration between researchers in the University of Bristol's 
+            <a href="https://www.bristol.ac.uk/geography/">School of Geographical Sciences</a>.
+            <br><br>
+            <a href="https://uk.linkedin.com/in/tomcantellow" target="_blank">Tom Cantellow</a> is a post-submission PhD student who specializes in spatial and statistical analysis of politics and economics. He can be contacted <a href="mailto:t.cantellow@bristol.ac.uk">here</a>. 
+            <br><br>
+            <a href="https://research-information.bris.ac.uk/en/persons/ed-atkins" target="_blank">Dr Ed Atkins</a> is a Senior Lecturer in Human Geography. His work focuses on energy transitions and socio-economic justice. He can be contacted <a href="mailto:ed.atkins@bristol.ac.uk">here</a>. 
+            <br><br>
+            <a href="https://www.caitlin-h-robinson.com/" target="_blank">Cait Robinson</a> is a Senior Research Fellow and Proleptic Lecturer who is currently leading a UKRI Future Leaders Fellowship project mapping ambient vulnerabilities in UK cities. 
+            <br><br>
+            and <a href="https://www.bristol.ac.uk/people/person/Sean-Fox-ade0ab9d-58b0-4b25-833a-73e8d4633d42/" target="_blank">Sean Fox</a> is an Associate Professor in Global Development focusing on the causes and consequences of global urbanization, the political economy of urban governance, and sustainable city futures.
+        </p>
         
         <footer>
             <nav>
-<div class="nav-title">
-    <span>Website by </span>
-    <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">Tom Cantellow</a>
-    <span> | </span>
-    <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
-</div>
+                <div class="nav-title">
+                    <span>Website by </span>
+                    <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline">Tom Cantellow</a>
+                    <span> | </span>
+                    <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
+                </div>
             </nav>
         </footer>
     </main>
