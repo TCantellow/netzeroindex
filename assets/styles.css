@@ -64,6 +64,8 @@ footer {
     margin-top: 20px;
     display: flex;
     justify-content: flex-end;
+    padding: 10px 0;
+    gap: 10px;
 }
 
 .toggle-button {
