@@ -6,69 +6,74 @@
     <title>NZVI - Authors</title>
     <meta name="description" content="About the authors">
     <meta name="theme-color" content="#ffffff">
-
+    
     <link rel="stylesheet" href="assets/styles.css"> <!-- Link to external stylesheet -->
     <script src="assets/script.js" defer></script> <!-- Link to external script -->
 </head>
 <body>
-    <header>
-        <h1>The Net Zero Vulnerability Index</h1>
-        <button type="button" onclick="toggleMode()" class="toggle-button">
-            Toggle Dark Mode
-        </button>
-    </header>
+    <div id="header-placeholder"></div>
 
-    <main class="content">
-        <div class="sub-nav">
-            <a href="index.html">Home</a>
-            <a href="about_research.html">About the Research</a>
-            <a href="about_authors.html">About the Authors</a>
-            <a href="methodology.html">Methodology</a>
-            <a href="NZVI_Interactive_Map.html">Full-Screen Map</a>
-            <a href="https://www.bristol.ac.uk/policybristol/">PolicyBristol Report</a>
-        </div>
-        
-        <p>This project is a product of a collaboration between researchers in the University of Bristol's 
-    <a href="https://www.bristol.ac.uk/geography/" target="_blank">School of Geographical Sciences</a>.
-</p>
+    <p>This project is a product of a collaboration between researchers in the University of Bristol's 
+        <a href="https://www.bristol.ac.uk/geography/" target="_blank">School of Geographical Sciences</a>.
+    </p>
 
-<h3>The research team:</h3>
-<ul>
-    <li>
-        <a href="https://uk.linkedin.com/in/tomcantellow" target="_blank">Tom Cantellow</a>: 
-        A researcher specialising in spatial and statistical analysis of politics and economics. 
-        Contact him <a href="mailto:t.cantellow@bristol.ac.uk">here</a>.
-    </li>
-    <li>
-        <a href="https://research-information.bris.ac.uk/en/persons/ed-atkins" target="_blank">Dr. Ed Atkins</a>: 
-        A Senior Lecturer in Human Geography focusing on energy transitions and socio-economic justice. 
-        Contact him <a href="mailto:ed.atkins@bristol.ac.uk">here</a>.
-    </li>
-    <li>
-        <a href="https://www.bristol.ac.uk/people/person/Sean-Fox-ade0ab9d-58b0-4b25-833a-73e8d4633d42/" target="_blank">Dr Sean Fox</a>: 
-        An Associate Professor in Global Development, focusing on the causes and consequences of global urbanization, the political economy of urban governance, and sustainable city futures.
-        Contact him <a href="mailto:sean.fox@bristol.ac.uk">here</a>.
+    <h3>The research team:</h3>
+    <ul>
+        <li>
+            <a href="https://uk.linkedin.com/in/tomcantellow" target="_blank">Tom Cantellow</a>: 
+            A researcher specialising in spatial and statistical analysis of politics and economics. 
+            Contact him <a href="mailto:t.cantellow@bristol.ac.uk">here</a>.
+        </li>
+        <li>
+            <a href="https://research-information.bris.ac.uk/en/persons/ed-atkins" target="_blank">Dr. Ed Atkins</a>: 
+            A Senior Lecturer in Human Geography focusing on energy transitions and socio-economic justice. 
+            Contact him <a href="mailto:ed.atkins@bristol.ac.uk">here</a>.
+        </li>
+        <li>
+            <a href="https://www.bristol.ac.uk/people/person/Sean-Fox-ade0ab9d-58b0-4b25-833a-73e8d4633d42/" target="_blank">Dr. Sean Fox</a>: 
+            An Associate Professor in Global Development, focusing on the causes and consequences of global urbanization, the political economy of urban governance, and sustainable city futures.
+            Contact him <a href="mailto:sean.fox@bristol.ac.uk">here</a>.
+        </li>
+        <li>
+            <a href="https://www.caitlin-h-robinson.com/" target="_blank">Dr. Cait Robinson</a>: 
+            A Senior Research Fellow and Proleptic Lecturer, researching the causes and consequences of different types of spatial inequality, with a particular interest in energy poverty and energy justice.
+            Contact her <a href="mailto:cait.robinson@bristol.ac.uk">here</a>.
+        </li>
+    </ul>
 
-    </li>
-    <li>
-        <a href="https://www.caitlin-h-robinson.com/" target="_blank">Dr Cait Robinson</a>: 
-        A Senior Research Fellow and Proleptic Lecturer, researching the causes and consequences of different types of spatial inequality, with a particular interest in energy poverty and energy justice.
-        Contact her <a href="mailto:cait.robinson@bristol.ac.uk">here</a>.
-    </li>
-</ul>
-     
-<footer>
-    <nav style="display: flex; align-items: center; gap: 5px;">
-        <div class="nav-title" style="display: flex; align-items: center;">
-            <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline" style="margin-right: 5px;">
-                Website by Tom Cantellow
-            </a>
-            <span style="margin: 0 5px;"> | </span>
-            <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
-        </div>
-    </nav>
-</footer>
+    <div id="footer-placeholder"></div>
 
-</main>
+    <script>
+        // Function to load the header
+        function loadHeader() {
+            fetch('assets/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        }
+
+        // Function to load the footer
+        function loadFooter() {
+            fetch('assets/footer.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        // Load both header and footer when the page loads
+        window.onload = function() {
+            loadHeader();
+            loadFooter();
+        };
+    </script>
 </body>
 </html>

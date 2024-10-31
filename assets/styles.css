@@ -8,62 +8,67 @@ body {
     font-family: Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s;
     text-align: justify;
+    line-height: 1.6; /* Increase line spacing for all text */
 }
 
 header {
-    margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Keep items in a column */
+    margin-bottom: 20px; /* Space below the header */
 }
 
-nav {
+/* Adjust flex layout for the title and button */
+header > div {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-title {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    gap: 10px; /* Space between items */
-    margin-left: 10px; /* Space on the left for the title */
+    justify-content: space-between; /* Space title and button */
+    width: 100%; /* Full width for alignment */
+    align-items: center; /* Center items vertically */
 }
 
 h1 {
-    text-align: left;
-    font-size: 2em;
-    margin: 0;
+    font-size: 2em; /* Font size for the title */
+    margin: 0; /* Remove default margin */
 }
 
-.content {
-    line-height: 1.6;
+.toggle-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 14px; /* Font size for button */
+    color: #555; /* Set the color to a grayish tone */
+    margin-left: auto; /* Align to the right */
+    padding: 5px 10px; /* Optional padding for better spacing */
+    text-align: right; /* Right-align text */
 }
 
+/* Sub-navigation styling */
 .sub-nav {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: space-around; /* Space items evenly */
+    margin-top: 10px; /* Space between the button and the menu */
+    width: 100%; /* Ensure the sub-nav takes full width */
+    flex-wrap: nowrap; /* Prevent items from wrapping */
 }
 
 .sub-nav a {
-    flex: none;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    color: inherit;
-    white-space: nowrap;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use inherited text color */
+    flex: 1; /* Allow links to take equal width */
+    text-align: center; /* Center text within the links */
+    padding: 10px; /* Padding for links */
+    white-space: nowrap; /* Prevent text wrapping */
+    border-bottom: 2px solid transparent; /* Border for hover effect */
+    transition: border-bottom 0.3s; /* Smooth transition */
 }
 
 .sub-nav a:hover {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #000; /* Hover effect */
 }
 
+/* Styling for footer */
 footer {
     display: flex;
-    justify-content: flex-end; /* Align content to the right */
+    justify-content: flex-end; /* Align footer content to the right */
     align-items: center; /* Center items vertically */
     margin-top: 20px; /* Space above the footer */
     padding: 10px 0; /* Space above and below footer items */
@@ -73,21 +78,18 @@ footer nav {
     display: flex; /* Ensure nav is also flex */
 }
 
+.nav-title {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between items */
+}
+
 .nav-title span {
     margin: 0 5px; /* Horizontal spacing for span elements */
 }
 
-.toggle-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    color: #555;
-    margin-left: 20px;
-}
-
 /* Dark mode styles */
 .dark body {
-    background-color: #333;
-    color: #ffffff;
+    background-color: #333; /* Background for dark mode */
+    color: #ffffff; /* Text color for dark mode */
 }

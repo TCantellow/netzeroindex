@@ -11,12 +11,7 @@
     <script src="assets/script.js" defer></script> <!-- Link to external script -->
 </head>
 <body>
-    <header>
-        <h1>The Net Zero Vulnerability Index</h1>
-        <button type="button" onclick="toggleMode()" class="toggle-button">
-            Toggle Dark Mode
-        </button>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main class="content">
 
@@ -42,17 +37,40 @@
 
         <p>The NZVI goes beyond just measuring job losses; it also considers how well communities and economies can adapt to changes in traditional industries. By examining the complexity of jobs, the connections between different industries, reliance on key sectors, and how many people might be affected, the NZVI provides a detailed picture of regional vulnerabilities.</p>
 
-<footer>
-    <nav style="display: flex; align-items: center; gap: 5px;">
-        <div class="nav-title" style="display: flex; align-items: center;">
-            <a href="https://www.linkedin.com/in/tomcantellow/" target="_blank" class="hover:underline" style="margin-right: 5px;">
-                Website by Tom Cantellow
-            </a>
-            <span style="margin: 0 5px;"> | </span>
-            <a href="https://github.com/TCantellow/netzeroindex" class="hover:underline">GitHub Repository</a>
-        </div>
-    </nav>
-</footer>
+        <div id="footer-placeholder"></div>
+
+        <script>
+            // Function to load the header
+            function loadHeader() {
+                fetch('assets/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('header-placeholder').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading header:', error));
+            }
+    
+            // Function to load the footer
+            function loadFooter() {
+                fetch('assets/footer.html')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok ' + response.statusText);
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading footer:', error));
+            }
+    
+            // Load both header and footer when the page loads
+            window.onload = function() {
+                loadHeader();
+                loadFooter();
+            };
+        </script>
         
 </main>
 </body>
