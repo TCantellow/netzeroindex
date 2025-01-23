@@ -310,7 +310,7 @@ LAD_Reliance$Mean_Relatedness <- sapply(relatedness_scores_list, function(scores
 
 LAD_Reliance$Mean_Relatedness <- normalize(LAD_Reliance$Mean_Relatedness)
 
-LAD_Reliance$Mean_Relatedness <- LAD_Reliance$Mean_Relatedness + 1
+LAD_Reliance$Mean_Relatedness <- 1 - LAD_Reliance$Mean_Relatedness #1 minus because more relatedness reduces vulnerbaility
 
 #Calculate Reliance/Relatedness Scores using mean
 LAD_Reliance$RR <- LAD_Reliance$Mean_Relatedness*LAD_Reliance$Reliance
@@ -825,7 +825,7 @@ LAD_Reliance$Mean_Relatedness <- sapply(relatedness_scores_list, function(scores
 
 LAD_Reliance$Mean_Relatedness <- normalize(LAD_Reliance$Mean_Relatedness)
 
-LAD_Reliance$Mean_Relatedness <- LAD_Reliance$Mean_Relatedness + 1
+LAD_Reliance$Mean_Relatedness <- 1 - LAD_Reliance$Mean_Relatedness #1 minus because more relatedness reduces vulnerbaility
 
 #Calculate Reliance/Relatedness Scores using mean
 LAD_Reliance$RR <- LAD_Reliance$Mean_Relatedness*LAD_Reliance$Reliance
